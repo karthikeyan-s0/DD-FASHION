@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #651D32;
+}
+
+/* Keyframe Animations for Luxury Visual Appeal */
+@keyframes shimmerBeam {
+  0% { transform: translateX(-120%) rotate(25deg); }
+  100% { transform: translateX(250%) rotate(25deg); }
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes pulseGoldGlow {
+  0%, 100% { transform: scale(1); opacity: 0.18; }
+  50% { transform: scale(1.08); opacity: 0.32; }
+}
+
+@keyframes watermarkDrift {
+  0%, 100% { transform: translateY(-28px) translateX(0px); }
+  50% { transform: translateY(-34px) translateX(8px); }
+}
+
+@keyframes radarWave {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes marqueeGlide {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeGlideReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Animation utility classes */
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 65%
+  );
+  animation: shimmerBeam 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+.animate-float {
+  animation: subtleFloat 5s ease-in-out infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulseGoldGlow 4s ease-in-out infinite;
+}
+
+.animate-watermark {
+  animation: watermarkDrift 8s ease-in-out infinite;
+}
+
+.animate-radar {
+  animation: radarWave 2.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeGlide 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeGlideReverse 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Luxury button and transition classes */
+.btn-primary {
+  @apply bg-[#4A0E17] hover:bg-[#380A11] text-[#FFF9F1] border border-[#C6A15B] px-7 py-3 rounded-none font-medium tracking-widest uppercase text-xs transition-all duration-300 shadow-[0_4px_16px_rgba(74,14,23,0.25)] hover:shadow-[0_6px_22px_rgba(198,161,91,0.35)] active:scale-95 inline-flex items-center justify-center gap-2 relative overflow-hidden;
+}
+
+.btn-secondary {
+  @apply border border-[#C6A15B]/70 hover:border-[#3D0C13] text-[#3D0C13] bg-transparent hover:bg-white px-7 py-3 rounded-none font-medium tracking-widest uppercase text-xs transition-all duration-300 active:scale-95 inline-flex items-center justify-center gap-2;
+}
+
+.btn-gold {
+  @apply bg-[#C6A15B] hover:bg-[#9F7C38] text-[#3D0C13] font-semibold px-6 py-3 rounded-none tracking-wider uppercase text-xs transition-all duration-300 shadow-md active:scale-95 inline-flex items-center justify-center gap-2;
+}
+
+.btn-whatsapp {
+  @apply bg-[#25D366] hover:bg-[#1EBE5D] text-white px-6 py-3 rounded-none font-medium tracking-wide text-xs transition-all duration-300 shadow-md active:scale-95 inline-flex items-center justify-center gap-2;
+}
+
+.gold-border {
+  border: 1px solid rgba(198, 161, 91, 0.35);
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(135deg, rgba(198, 161, 91, 0.08) 0%, rgba(255, 249, 241, 0.8) 100%);
+}
