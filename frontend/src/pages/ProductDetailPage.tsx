@@ -106,7 +106,7 @@ export const ProductDetailPage: React.FC = () => {
   );
 
   return (
-    <div className="bg-[#FFF9F1] min-h-screen py-8">
+    <div className="bg-[#FFF9F1] min-h-screen py-6 sm:py-8 pb-24 sm:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb Navigation */}
@@ -430,6 +430,42 @@ export const ProductDetailPage: React.FC = () => {
         )}
 
       </div>
+
+      {/* Mobile Fixed Sticky Purchase Bar for Instant Conversion */}
+      <div 
+        className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFF9F1]/95 backdrop-blur-md border-t border-[#C6A15B]/30 px-4 py-2.5 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] flex items-center justify-between gap-3 select-none"
+        style={{ paddingBottom: 'max(0.625rem, env(safe-area-inset-bottom))' }}
+      >
+        <div className="flex flex-col min-w-0 pr-2">
+          <span className="font-serif text-lg font-bold text-[#651D32] leading-tight truncate">
+            {formatPrice(product.price)}
+          </span>
+          <span className="text-[10px] text-[#716963] truncate">
+            {selectedSize ? `Size: ${selectedSize}` : (isPendingSize ? 'Size Pending' : 'Choose Size')}
+          </span>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp py-2 px-3 text-xs font-semibold flex items-center gap-1.5 shadow active:scale-95"
+            aria-label="Order on WhatsApp"
+          >
+            <MessageCircle size={15} />
+            <span>Enquire</span>
+          </a>
+          <button
+            onClick={handleAddToCart}
+            disabled={product.stock_quantity <= 0}
+            className="btn-primary py-2 px-3.5 text-xs font-semibold tracking-wider flex items-center gap-1.5 shadow disabled:opacity-50 active:scale-95"
+          >
+            <ShoppingBag size={14} />
+            <span>{product.stock_quantity > 0 ? 'Add' : 'Sold Out'}</span>
+          </button>
+        </div>
+      </div>
+
     </div>
   );
 };

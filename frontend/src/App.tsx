@@ -8,6 +8,7 @@ import { AnnouncementBar } from './components/common/AnnouncementBar';
 import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
+import { MobileBottomNav } from './components/common/MobileBottomNav';
 import { CartDrawer } from './components/cart/CartDrawer';
 
 import { HomePage } from './pages/HomePage';
@@ -42,12 +43,13 @@ const ScrollToTop: React.FC = () => {
 // Main Public Storefront Layout
 const StorefrontLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFF9F1]">
+    <div className="flex flex-col min-h-screen bg-[#FFF9F1] pb-16 sm:pb-0">
       <AnnouncementBar />
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
       <FloatingWhatsApp />
+      <MobileBottomNav />
       <CartDrawer />
     </div>
   );

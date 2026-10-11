@@ -59,7 +59,7 @@ export const BoutiqueRunningRibbon: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
         
         {/* Top-Right Floating Boutique Badge (Matches Screenshot) */}
-        <div className="sm:absolute sm:right-6 lg:right-8 sm:top-5 mb-4 sm:mb-0 flex justify-end">
+        <div className="sm:absolute sm:right-6 lg:right-8 sm:top-5 mb-4 sm:mb-0 flex justify-center sm:justify-end">
           <div className="inline-flex items-center gap-3 bg-[#180A10]/90 border border-[#C6A15B]/50 px-4 py-2 rounded-xl backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.6)] group hover:border-[#C6A15B] transition-colors duration-300">
             <div className="w-8 h-8 rounded-lg bg-[#C6A15B]/20 border border-[#C6A15B]/60 flex items-center justify-center shrink-0">
               <Sparkles size={16} className="text-[#C6A15B] animate-pulse" />

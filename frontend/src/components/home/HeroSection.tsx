@@ -50,7 +50,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#282323] leading-[1.08] font-normal tracking-tight"
+              className="font-serif text-3xl sm:text-5xl lg:text-7xl text-[#282323] leading-[1.12] sm:leading-[1.08] font-normal tracking-tight"
             >
               Tradition, <br />
               <span 
@@ -99,34 +99,34 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="pt-6 grid grid-cols-3 gap-3 sm:gap-6 border-t border-[#C6A15B]/30 max-w-lg mx-auto lg:mx-0"
+              className="pt-6 grid grid-cols-3 gap-1.5 sm:gap-6 border-t border-[#C6A15B]/30 max-w-lg mx-auto lg:mx-0"
             >
               
               {/* Badge 1: 100% Authentic Weaves */}
-              <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-1 pr-2 group cursor-default">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="mb-1 transition-transform duration-300 group-hover:scale-110">
+              <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-0.5 sm:space-y-1 pr-1 sm:pr-2 group cursor-default">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="mb-0.5 sm:mb-1 transition-transform duration-300 group-hover:scale-110">
                   <rect x="3" y="4" width="18" height="16" rx="2" />
                   <line x1="8" y1="4" x2="8" y2="20" strokeDasharray="2 2" />
                   <line x1="16" y1="4" x2="16" y2="20" strokeDasharray="2 2" />
                   <line x1="3" y1="10" x2="21" y2="10" strokeDasharray="2 2" />
                   <line x1="3" y1="14" x2="21" y2="14" strokeDasharray="2 2" />
                 </svg>
-                <span className="font-serif text-sm sm:text-base font-bold text-[#3D0C13] leading-none">100%</span>
-                <span className="text-[9px] sm:text-[10px] text-[#716963] font-semibold uppercase tracking-wider">Authentic Weaves</span>
+                <span className="font-serif text-xs sm:text-base font-bold text-[#3D0C13] leading-none">100%</span>
+                <span className="text-[8px] sm:text-[10px] text-[#716963] font-semibold uppercase tracking-wider leading-tight">Authentic Weaves</span>
               </div>
 
               {/* Divider */}
-              <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-1 border-l border-[#C6A15B]/30 pl-3 sm:pl-5 pr-2 group cursor-default">
-                <Crown size={22} className="text-[#C6A15B] mb-1 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.6} />
-                <span className="font-serif text-sm sm:text-base font-bold text-[#3D0C13] leading-none">Direct</span>
-                <span className="text-[9px] sm:text-[10px] text-[#716963] font-semibold uppercase tracking-wider">Boutique Quality</span>
+              <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-0.5 sm:space-y-1 border-l border-[#C6A15B]/30 pl-2 sm:pl-5 pr-1 sm:pr-2 group cursor-default">
+                <Crown size={20} className="text-[#C6A15B] mb-0.5 sm:mb-1 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.6} />
+                <span className="font-serif text-xs sm:text-base font-bold text-[#3D0C13] leading-none">Direct</span>
+                <span className="text-[8px] sm:text-[10px] text-[#716963] font-semibold uppercase tracking-wider leading-tight">Boutique Quality</span>
               </div>
 
               {/* Badge 3: Instant WhatsApp Ordering */}
-              <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-1 border-l border-[#C6A15B]/30 pl-3 sm:pl-5 group cursor-default">
-                <MessageCircle size={22} className="text-[#C6A15B] mb-1 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.6} />
-                <span className="font-serif text-sm sm:text-base font-bold text-[#3D0C13] leading-none">Instant</span>
-                <span className="text-[9px] sm:text-[10px] text-[#716963] font-semibold uppercase tracking-wider">WhatsApp Ordering</span>
+              <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-0.5 sm:space-y-1 border-l border-[#C6A15B]/30 pl-2 sm:pl-5 group cursor-default">
+                <MessageCircle size={20} className="text-[#C6A15B] mb-0.5 sm:mb-1 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.6} />
+                <span className="font-serif text-xs sm:text-base font-bold text-[#3D0C13] leading-none">Instant</span>
+                <span className="text-[8px] sm:text-[10px] text-[#716963] font-semibold uppercase tracking-wider leading-tight">WhatsApp Orders</span>
               </div>
 
             </motion.div>
@@ -144,7 +144,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-10 w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[400px] group transition-transform duration-700 animate-float"
+              className="relative z-10 w-full max-w-[280px] sm:max-w-[380px] lg:max-w-[400px] group transition-transform duration-700 animate-float"
             >
               
               {/* Arch Image Asset with Luxury Deep Shadow */}

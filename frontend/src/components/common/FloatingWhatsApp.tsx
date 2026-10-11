@@ -10,7 +10,7 @@ export const FloatingWhatsApp: React.FC = () => {
   );
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-end flex-col gap-2">
+    <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex items-end flex-col gap-2">
       {/* Tooltip speech bubble */}
       {showTooltip && (
         <div className="bg-[#FFF9F1] border border-[#C6A15B] shadow-2xl rounded-sm p-3 max-w-[240px] text-xs text-[#282323] relative animate-fadeIn backdrop-blur-md">
