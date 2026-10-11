@@ -3,7 +3,7 @@ import {
   WishlistItem, User, Address, Order, AdminStats
 } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE_URL || '/api';
 
 // Generate or fetch guest session ID
 export function getSessionId(): string {
